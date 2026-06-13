@@ -279,6 +279,88 @@ input, select, textarea, button { max-width: 100%; }
   .reduced-price-banner strong { font-size: 1.35rem; }
   .reduced-price-banner span { line-height: 1.45; }
 }
+
+/* FINAL DEVICE CONSISTENCY */
+:root {
+  color-scheme: dark;
+  --black: #080808;
+  --deep: #111111;
+  --card: #141414;
+  --border: #2a2a2a;
+  --gold: #c8a020;
+  --gold-light: #e2b940;
+  --white: #f0ece3;
+  --muted: #777777;
+  --red: #b03020;
+}
+html, body { background-color: var(--black); }
+body { min-width: 320px; }
+nav, section, footer, .stats-bar, .dog-card, .pricing-bar, .pedigree-panel, .contact-form, input, select, textarea { forced-color-adjust: none; }
+input, select, textarea { background-color: var(--card); color: var(--white); -webkit-text-fill-color: var(--white); }
+select { color-scheme: dark; }
+
+/* Show Ratatouille's entire portrait on every screen. */
+.dog-img-wrap img[alt="Ratatouille"] {
+  object-fit: contain !important;
+  object-position: center center !important;
+  background: #0b0b0b;
+  transform: none !important;
+  filter: brightness(1) !important;
+}
+.dog-card:hover .dog-img-wrap img[alt="Ratatouille"] { transform: none !important; }
+
+/* Tighter shared rhythm across desktop, tablet, and mobile. */
+section { padding-top: 70px; padding-bottom: 70px; }
+.section-title { margin-bottom: 14px; }
+.parents-grid, .stud-grid, .contact-grid { margin-top: 36px; }
+.parents-grid, .dogs-grid { gap: 10px; }
+.stud-grid { gap: 44px; }
+.contact-grid { gap: 52px; }
+.dog-info { padding: 16px 18px 18px; }
+.dog-meta { margin-bottom: 11px; }
+.dog-tags { margin-bottom: 12px; }
+.dog-inquire { margin-top: 10px; }
+.pricing-bar { margin-bottom: 34px; }
+.pricing-item { padding-top: 15px; padding-bottom: 15px; }
+.pedigree-panel { margin-top: 34px; padding: 18px; }
+.litter-divider { margin-top: 34px; }
+.contact-item { padding-top: 16px; padding-bottom: 16px; }
+.form-group input, .form-group select, .form-group textarea { padding-top: 12px; padding-bottom: 12px; }
+footer { padding-top: 28px; padding-bottom: 28px; }
+
+@media (max-width: 1024px) {
+  section { padding-top: 58px; padding-bottom: 58px; }
+  .parents-grid, .stud-grid, .contact-grid { margin-top: 30px; }
+  .stud-grid, .contact-grid { gap: 32px; }
+  .dog-img-wrap { aspect-ratio: 4 / 5; }
+}
+
+@media (max-width: 768px) {
+  nav { background: rgba(8,8,8,0.97); border-bottom-color: rgba(200,160,32,0.2); }
+  section { padding: 46px 16px; }
+  #parents, #stud, footer { background-color: var(--deep); }
+  #available, #contact { background-color: var(--black); }
+  .hero-overlay { background: linear-gradient(180deg, rgba(8,8,8,0.28) 0%, rgba(8,8,8,0.6) 55%, rgba(8,8,8,1) 100%); }
+  .stats-bar, .pricing-bar, .dog-card, .pedigree-panel, .cashapp-box, .transport-box { background-color: var(--card); }
+  .parents-grid, .stud-grid, .contact-grid { margin-top: 26px; }
+  .dogs-grid { gap: 12px; }
+  .dog-info { padding: 15px 16px 17px; }
+  .dog-img-wrap { aspect-ratio: 4 / 5; background: #0b0b0b; }
+  .pricing-bar { margin-bottom: 26px; }
+  .pricing-item { padding: 13px 11px; }
+  .pedigree-panel { margin-top: 26px; padding: 12px; }
+  .litter-divider { margin: 28px 0 15px; }
+  .contact-grid { gap: 30px; }
+  .contact-item { padding: 14px 0; }
+  .contact-form { gap: 13px; }
+  footer { padding: 26px 16px; }
+}
+
+@media (max-width: 390px) {
+  section { padding-left: 13px; padding-right: 13px; }
+  .dog-info { padding-left: 14px; padding-right: 14px; }
+  .reduced-price-banner { margin-bottom: 18px; }
+}
 </style>  
   
 </head>  
@@ -531,6 +613,7 @@ input, select, textarea, button { max-width: 100%; }
   
 </body>  
 </html>  
+
 
 
 
